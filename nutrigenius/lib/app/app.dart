@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../features/dashboard/presentation/pages/dashboard_page.dart';
+import 'router/app_router.dart';
 import 'theme/app_theme.dart';
 
 class NutriGeniusApp extends StatelessWidget {
@@ -8,11 +8,11 @@ class NutriGeniusApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'NutriGenius',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
-      home: const DashboardPage(),
+      routerConfig: AppRouter.router,
     );
   }
 }
